@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body style="overflow: hidden;">
+    <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+    <div id="navbar" style="height: 10%; width: 100%; display: flex; justify-content: space-between; align-items: center; border-radius: 10px;">
+        <div id="logo-container" style="width: 100%; padding-top: 10px; padding-left: 10px; background: white;">
+           <img style="width: 35%; margin: 0;" src="blombiler.png">
+        </div>
+    </div>
+</div>
+    
+    <section style="margin-top: 45px;">
+        <div class="form-box">
+            <form>
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" required>
+                    <label>Email :</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input style="margin-left: 60px; font-size: 25px;" type="password" required>
+                    <label>Password :</label>
+                </div>
+                <button onclick="window.location.href='car-copy.html'">Log in</button>
+
+                <div class="register">
+                    <p>Dont have an account <a href="signup.html">Regsiter</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

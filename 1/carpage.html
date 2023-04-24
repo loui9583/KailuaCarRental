@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .car-box-container {
+            text-align: center;
+                width: 400px;
+                height: 500px;
+                border: 2.5px solid black;
+                border-radius: 5px;
+                display: inline-block; /*gør at der ikke er linjeskift*/
+                margin-left: 17px;
+                margin-right: 17px;
+        }
+        #container {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+        }
+        
+        #container span {
+                margin-top: 7px;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: 16px;
+                margin-left: 10px;
+                margin-right: 10px;
+                background: black;
+                color: white;
+        }
+        * {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .fixed {
+                position: fixed;
+                
+                top: 0;
+                left: 0;
+                right: 0;
+        }
+                .spacer {
+                height: 25px; /* The height of the sortNav */
+        }
+    
+        html , body  {
+                margin: 0;
+                height: 100%;   
+        }
+    
+    
+        .box-img {
+                height: 225px; width: 100%; border-bottom: 2px solid black; border-top: 2px solid black;
+        }
+    
+        .box-head-spacer {
+                 margin-top: 13px;
+        }
+            
+            .box-brand {
+                margin-right: 0px;
+        }
+    
+        .box-category {
+                margin-right: 0px;
+        }
+        .box-head {
+                margin-top: 6px;
+                display: flex;
+                justify-content: space-between;
+        }
+        .car-box-price-info-container {
+                width: 100%; display: flex; justify-content: center;
+        }
+        .car-box-price-info {
+                width: 300px; display: flex; justify-content: space-between;
+        }
+        h4 {
+                color: rgb(52, 52, 52);
+        }
+        
+        .car-box-button-container {
+                width: 100%; display: flex; justify-content: center;
+        }
+        .car-box-button-inner-container {
+                width: 220px; 
+                height: 55px; 
+                border: 2px solid black; 
+                border-radius: 3px;
+        }
+        .car-box-inner-inner-container {
+                height: 100%; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center;
+        }
+        html, body {
+      box-shadow: inset 0px 0px 10px #ccc;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    
+<!-- NavBar -->
+<div id="navbar" style="height: 10%; display: flex; justify-content: space-between; align-items: center; border-radius: 10px;">
+    <div id="logo-container" style="width: 100%; padding-top: 10px; padding-left: 10px; background: white;">
+       <a href="car-copy.html"><img style="width: 35%; margin: 0;" src="blombiler.png"></a>
+    </div>
+    </div>
+    <a href="login.html"><div style="background: black; display: flex; justify-content: center; align-items: center; position: absolute; width: 100px; height: 20px; top: 0; right: 0; border: 2px solid black; border-radius: 5px;"><span style="background: black; color: white; ">Log Out</span></div></a>
+    <a href="car-copy.html">
+        <div style="background: black; display: flex; justify-content: center; align-items: center; position: absolute; width: 100px; height: 20px; top: 0px; right: 120px; border: 2px solid black; border-radius: 5px;">
+          <span style="background: black; color: white;">Go Back</span>
+        </div>
+      </a>
+      
+<!-- NavBar -->
+
+<div id="container" style="height: 80%; margin-top: 20px;"> 
+
+    <!---->
+       <a href="#" style="color: black; text-decoration: none;">
+        <div class="car-box-container">
+            <div class="box-head">
+                <div class="box-head-spacer">
+                <span class="box-brand">Ferrari</span>
+                <span class="box-category">Sport</span>
+                </div>
+                 <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzine</span>
+            </div>
+            <h1 class="modelname">296 GTB
+            </h1>
+            <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2022-ferrari-296gtb-assetto-fiorano-105-1646595950.jpg?crop=0.730xw:0.616xh;0.103xw,0.298xh&resize=1200:*" alt="grå audi">
+            <div class="car-box-price-info-container">
+                 <div class="car-box-price-info">
+                    <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                    <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <!---->
+
+<!----> 
+    <div class="car-box-container" style="width: 900px; text-align: start;">
+        <div style="margin-left: 10px;">
+            <h1 style="text-align: center;">Ferrari 296 GTB</h1>
+              <p>The Ferrari 296 GTB is a hybrid sports car produced by the Italian automaker Ferrari. It was introduced in 2021 as a replacement for the Ferrari F8 Tributo. The car is powered by a 2.9-liter V6 engine coupled with an electric motor, which together produce a total output of 818 horsepower. The car can accelerate from 0 to 60 mph in just 2.9 seconds and has a top speed of over 205 mph.</p>
+            <h2>Features</h2>
+            <ul>
+              <li>2.9-liter V6 engine</li>
+              <li>Electric motor</li>
+              <li>818 horsepower</li>
+              <li>0-60 mph in 2.9 seconds</li>
+              <li>Top speed of over 205 mph</li>
+              <li>Hybrid powertrain</li>
+              <li>8-speed automatic transmission</li>
+              <li>Carbon-ceramic brakes</li>
+              <li>Adaptive suspension</li>
+            </ul>
+            <h2>Price</h2>
+            <p>The base price of the Ferrari 296 GTB is around $320,000.</p>
+        </div>
+    </div>
+
+
+
+<!---->
+
+    </div>
+    <a href="buy-car-form.html" style="text-decoration: none;">
+<div style="position: relative; top: -2%; display: flex; justify-content: center; height: 6%;"> 
+<div style="background: darkred; color: white; display:flex; align-items: center; justify-content: center; width: 20%; border: 2px solid black; height: 100%; border-radius: 10px;">
+<h1>Buy Now</h1></div>
+</div></a>
+
+</body>
+</html>

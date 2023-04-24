@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .car-box-container {
+            width: 400px;
+            height: 550px;
+            border: 2.5px solid black;
+            border-radius: 5px;
+            display: inline-block; /*gør at der ikke er linjeskift*/
+            margin-bottom: 30px;
+            margin-left: 17px;
+            margin-right: 17px;
+    }
+    #container {
+            
+            text-align: center;
+            width: 100%;
+    }
+    
+    #container span {
+            margin-top: 7px;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 16px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background: black;
+            color: white;
+    }
+    * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .fixed {
+            position: fixed;
+            
+            top: 0;
+            left: 0;
+            right: 0;
+    }
+            .spacer {
+            height: 25px; /* The height of the sortNav */
+    }
+
+    html , body  {
+            margin: 0;
+            height: 100%;   
+    }
+
+
+    .box-img {
+            height: 225px; width: 100%; border-bottom: 2px solid black; border-top: 2px solid black;
+    }
+
+    .box-head-spacer {
+            margin-top: 13px;
+    }
+        
+        .box-brand {
+            margin-right: 0px;
+    }
+
+    .box-category {
+            margin-right: 0px;
+    }
+    .box-head {
+            margin-top: 6px;
+            display: flex;
+            justify-content: space-between;
+    }
+    .car-box-price-info-container {
+            width: 100%; display: flex; justify-content: center;
+    }
+    .car-box-price-info {
+            width: 300px; display: flex; justify-content: space-between;
+    }
+    h4 {
+            color: rgb(52, 52, 52);
+    }
+    
+    .car-box-button-container {
+            width: 100%; display: flex; justify-content: center;
+    }
+    .car-box-button-inner-container {
+            width: 220px; 
+            height: 55px; 
+            border: 2px solid black; 
+            border-radius: 3px;
+    }
+    .car-box-inner-inner-container {
+            height: 100%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+    }
+    html, body {
+  box-shadow: inset 0px 0px 10px #ccc;
+}
+
+</style>
+</head>
+
+<body style="margin: 0; overflow-x: hidden;">
+
+<!-- NavBar -->
+    <div id="navbar" style="height: 10%; width: 100%; display: flex; justify-content: space-between; align-items: center; border-radius: 10px;">
+    <div id="logo-container" style="width: 100%; padding-top: 10px; padding-left: 10px; background: white;">
+       <a href="car-copy.html"><img style="width: 35%; margin: 0;" src="blombiler.png"></a>
+    </div>
+</div>
+<a href="login.html"><div style="background: black; display: flex; justify-content: center; align-items: center; position: absolute; width: 100px; height: 20px; top: 0; right: 0; border: 2px solid black; border-radius: 5px;"><span style="background: black; color: white; ">Log Out</span></div></a>
+
+<!-- NavBar -->
+  
+<!-- Nice Picture Under The Nav -->
+    <a style="text-decoration: none;" href="#sortNav">
+    <div style="display: flex; align-items: end; justify-content: end; box-shadow: 2px 2px px rgba(0, 0, 0, 0.3);
+    width: 100%; height: 90%; background-image: url('https://sparmsdc-static.s3.amazonaws.com/uploads/2017/12/tetravue-landing-page.jpg'); background-size: cover; background-position: center;">
+    <h2 style="margin-top: 0; margin-bottom: 0; text-align: center; background: rgba(0, 0, 0); color: white; padding: 10px;">See Car Selection >></h2>
+    </div>
+    </a>
+<!-- -->
+
+<!-- Car Sorting Nav #sortNav -->
+    <div id="sortNav">
+       <div style="background: black; height: 25px; border: 2px solid black; display: flex; align-items: center; justify-content: space-between;">
+       <div style="display: flex;"> 
+            <button style="margin-right: 2px; display: flex; align-items: end; justify-content: center;  width: 50px;"><img style="max-height: 20px;" src="funnel-outline.svg"></button>
+            <button style="margin-right: 2px; display: flex; align-items: end; justify-content: center;  width: 120px;"><span style="margin-left: 5px; margin-right: 5px;">Brands</span><img style="max-height: 20px;" src="caret-down-circle-outline.svg"></button>
+            <button style="margin-right: 2px; display: flex; align-items: end; justify-content: center;   width: 120px;"><span style="margin-left: 5px; margin-right: 5px;">Categories</span><img style="max-height: 20px;" src="caret-down-circle-outline.svg"></button>
+            <button style="margin-right: 2px; display: flex; align-items: end; justify-content: center;   width: 120px;"><span style="margin-left: 5px; margin-right: 5px;">FuelType</span><img style="max-height: 20px;" src="caret-down-circle-outline.svg"></button>
+            <button style="margin-right: 2px; display: flex; align-items: end; justify-content: center;   width: 120px;"><span style="margin-left: 5px; margin-right: 5px;">Price</span><img style="max-height: 20px;" src="caret-down-circle-outline.svg"></button>   
+        </div>
+            <input style="height: 80%;" placeholder="Search..">
+        </div>
+    </div>
+    <div style="background: white; height: 60px;"></div>
+  
+<!-- Car Sorting Nav #sortNav -->
+    
+<!-- All of the Car Cards Starts here -->
+<div id="container"> 
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Alfa Romeo</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">Giulia Quadrifoglio</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2023-alfa-romeo-giulia-quadrifoglio-101-1667326905.jpg?crop=0.766xw:0.647xh;0.0385xw,0.216xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Lamborghini</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">Aventador</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2022-lamborghini-aventador-109-1625607587.jpg?crop=0.750xw:0.632xh;0.183xw,0.233xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Bugatti</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">Chiron</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/bugatti-sur-mesure-chiron-pur-sport-106-1639069047.jpg?crop=0.766xw:0.647xh;0.234xw,0.353xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+
+<!---->
+   <a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Ferrari</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">296 GTB
+        </h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2022-ferrari-296gtb-assetto-fiorano-105-1646595950.jpg?crop=0.730xw:0.616xh;0.103xw,0.298xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Aston Martin</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">DB11 AMR</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2018-aston-martin-db11-amr-156-1525983030.jpg?crop=0.668xw:0.615xh;0.115xw,0.272xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Koenigsegg</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">Jesko </h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/koenigsegg-jesko-101-1551799580.jpg?crop=1.00xw:0.929xh;0,0.0288xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Maserati</span>
+            <span class="box-category">Sport</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">GranTurismo 2024</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2023-maserati-granturismo-modena-7-1676302719.jpg?crop=0.527xw:0.527xh;0.280xw,0.444xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Bentley</span>
+            <span class="box-category">Luxury</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">Continental GT Speed</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/06/2016-Bentley-Continental-GT-Speed-101.jpg?crop=1.00xw:0.924xh;0,0.0761xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+<!---->
+<a href="carpage.html" style="color: black; text-decoration: none;">
+    <div class="car-box-container">
+        <div class="box-head">
+            <div class="box-head-spacer">
+            <span class="box-brand">Rolls Royce</span>
+            <span class="box-category">Luxury</span>
+            </div>
+             <span class="box-fueltype" style="background: rgb(128, 0, 0);">Benzin</span>
+        </div>
+        <h1 class="modelname">Ghost</h1>
+        <img class="box-img" src="https://hips.hearstapps.com/hmg-prod/images/2023-rolls-royce-black-badge-101-1673365072.jpeg?crop=0.945xw:0.799xh;0.0375xw,0.103xh&resize=1200:*" alt="grå audi">
+        <div class="car-box-price-info-container">
+             <div class="car-box-price-info">
+                <div><h4>Mdl. ydelse fra</h4><h3>7000,-</h3></div>
+                <div><h4>Udebetaling fra</h4><h3>99000,-</h3></div>
+            </div>
+        </div>
+        <div class="car-box-button-container">
+            <div class="car-box-button-inner-container">
+                <div class="car-box-inner-inner-container">
+                    <h2>Vælg Model</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<!---->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+// Get the element you want to make fixed
+const sortNav = document.getElementById('sortNav');
+
+// Get the current position of the element relative to the top of the page
+const sortNavTop = sortNav.offsetTop;
+
+// Add an event listener to the window object that will execute a function when the user scrolls
+window.addEventListener('scroll', function() {
+  // Check if the user has scrolled past the position of the element
+  if (window.pageYOffset >= sortNavTop) {
+    // If so, add a CSS class to the element that makes its position fixed
+    sortNav.classList.add('fixed');
+  } else {
+    // Otherwise, remove the CSS class so that the element returns to its original position
+    sortNav.classList.remove('fixed');
+  }
+});
+</script>
+<script>
+    const sortNav = document.getElementById('sortNav');
+    
+    // Get the current position of the element relative to the top of the page
+    const sortNavTop = sortNav.offsetTop;
+    
+    // Create a spacer element
+    const spacer = document.createElement('div');
+    spacer.classList.add('spacer');
+    
+    // Add an event listener to the window object that will execute a function when the user scrolls
+    window.addEventListener('scroll', function () {
+      // Check if the user has scrolled past the position of the element
+      if (window.pageYOffset >= sortNavTop) {
+        // If so, add a CSS class to the element that makes its position fixed
+        sortNav.classList.add('fixed');
+    
+        // Add the spacer element after the sortNav element
+        sortNav.insertAdjacentElement('afterend', spacer);
+      } else {
+        // Otherwise, remove the CSS class so that the element returns to its original position
+        sortNav.classList.remove('fixed');
+    
+        // Remove the spacer element
+        if (spacer.parentNode) {
+          spacer.parentNode.removeChild(spacer);
+        }
+      }
+    });
+    </script>
+</body>
+</html>

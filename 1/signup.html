@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+        <div id="navbar" style="height: 10%; width: 100%; display: flex; justify-content: space-between; align-items: center; border-radius: 10px;">
+            <div id="logo-container" style="width: 100%; padding-top: 10px; padding-left: 10px; background: white;">
+               <img style="width: 35%; margin: 0;" src="blombiler.png">
+            </div>
+        </div>
+    </div>
+    <section style="margin-top: 50px;">
+        <div style="height: 540px;" class="form-box">
+            <form>
+                <h2>Signup</h2>
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input style="margin-left: 65px;" type="text" required>
+                    <label>First name :</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input style="margin-left: 65px;" type="text" required>
+                    <label>Last name :</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" required>
+                    <label>Email :</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input style="margin-left: 60px; font-size: 25px;" type="password" required>
+                    <label>Password :</label>
+                </div>
+                <button onclick="window.location.href='car-copy.html'">Sign up</button>
+            </form>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
